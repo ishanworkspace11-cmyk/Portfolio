@@ -1,0 +1,28 @@
+.card {
+    flex: auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.w{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card:hover {
+  /* This moves the card up slightly */
+  transform: translateY(-8px); 
+  
+  /* This creates a deeper, darker shadow to make it look like it's lifting off the page */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+}
