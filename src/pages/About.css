@@ -1,6 +1,7 @@
 .card {
-    flex: auto;
-  background: #ffffff;
+  flex: auto;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 32px;
@@ -10,12 +11,34 @@
 }
 
 h2{
-    font-size: 20px;
+    font-size: 25px;
+    color: #e2e8f0;
+}
+
+p{
+  color: #e2e8f0;
+}
+
+ul{
+  color: #e2e8f0;
+}
+
+li{
+  color: #e2e8f0;
+}
+
+h3{
+  color: #e2e8f0;
+}
+
+span{
+  color: #e2e8f0;
 }
 
 .w{
     display : flex;
     flex-wrap: wrap;
+    color: #e2e8f0;
     justify-content: space-around;
 }
 

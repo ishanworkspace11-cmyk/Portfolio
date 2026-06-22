@@ -1,70 +1,120 @@
-/* Main container: added a subtle card look */
+/* Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  font-family: "Poppins", sans-serif;
+}
+
 .box {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: #fdfdfd;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  
-  /* This tells .box to animate smoothly when its state changes */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem;
+  flex-wrap: wrap;
 }
 
-/* CHANGED: This is now .box:hover instead of .card:hover */
-.box:hover {
-  transform: translateY(-8px); 
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
-}
-.card:hover {
-  /* This moves the card up slightly */
-  transform: translateY(-8px); 
-  
-  /* This creates a deeper, darker shadow to make it look like it's lifting off the page */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
-}
-
-/* Profile Photo */
 .photo {
-  width: 220px;
-  height: 220px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Prevents the image from shrinking on smaller screens */
+  border: 5px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(59, 130, 246, 0.3);
+  transition: 0.4s ease;
 }
 
-/* Container for all the text */
+.photo:hover {
+  transform: scale(1.05);
+}
+
 .info-container {
-  display: flex;
-  flex-direction: column;
+  max-width: 650px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Name */
-.name {
-  font-size: 2.5rem;
-  color: #1a1a1a;
-  margin: 0 0 5px 0; /* Tight spacing below the name */
+.subtitle:first-child {
+  font-size: 3rem;
   font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-/* Branch & College */
-.subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0 0 15px 0;
+.subtitle:nth-child(2) {
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  color: #60a5fa;
+  margin-bottom: 1.5rem;
 }
 
-/* Bio */
 .intro {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 0;
+  color: #d1d5db;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .box {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .info-container {
+    max-width: 90%;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .subtitle:first-child {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .box {
+    padding: 1.5rem;
+  }
+
+  .photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .info-container {
+    padding: 1.5rem;
+  }
+
+  .subtitle:first-child {
+    font-size: 2rem;
+  }
+
+  .subtitle:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
 }

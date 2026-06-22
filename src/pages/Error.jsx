@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Error.css";
 
 const ErrorPage = () => {
@@ -31,14 +32,12 @@ const ErrorPage = () => {
           <p className="error-page__heading-desciption">404 error</p>
         </div>
 
-        <a
-          className="error-page__button"
-          href="/"
-          aria-label="back to home"
-          title="back to home"
-        >
-          back to home
-        </a>
+       <Link
+  className="error-page__button"
+  to="/"
+>
+  back to home
+</Link>
       </div>
 
       <button
